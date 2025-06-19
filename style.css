@@ -32,7 +32,8 @@ small {
   background-image: url("./images/top_image.jpg"); /* Replace with your image link */
   background-size: cover; /* This makes the image cover the whole background */
   background-repeat: no-repeat; /* This stops the image from repeating */
-  background-attachment: fixed; /* This makes the image stay in place when you scroll */
+  background-attachment: fixed; /* This makes the image stay in place relative to the viewport when scrolling */
+  background-position: center center; /* Ensures the image is centered */
   background-color: #fce7e7;
   height: 325px;
   border-radius: 0 0 30px 30px;
@@ -57,8 +58,13 @@ ol {
   padding-left: 0; /* Removes default browser indentation for the list */
 }
 
-.container ol li p {
+.container li p {
   padding-left: 30px;
+}
+
+/* Ensure instruction titles (h3) start on the same line as their list number */
+#instructions ol li h3 {
+  display: inline;
 }
 
 /* Time labels in introduction */
@@ -75,8 +81,85 @@ footer {
 }
 
 .final-image-gallery img{
-  background-size: cover; /* This makes the image cover the whole background */
-  background-repeat: no-repeat; /* This stops the image from repeating */
-  background-attachment: fixed;
+  /* Ensure images scale within their container and maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below inline images */
   border-radius: 30px;
+  background-attachment: scroll;
+}
+
+/* --- Responsive Design --- */
+
+/* For tablets and larger mobile devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 40px; /* Reduce padding */
+  }
+
+  .title-text {
+    font-size: 48px; /* Adjust title font size */
+  }
+
+  .sub-title-text,
+  h2 {
+    font-size: 28px; /* Adjust subtitle and h2 font size */
+  }
+
+  h3 {
+    font-size: 22px; /* Adjust h3 font size */
+  }
+
+  p,
+  li {
+    font-size: 18px; /* Adjust paragraph and list item font size */
+  }
+
+  .top-image-recipe {
+    height: 250px; /* Adjust hero image height */
+  }
+
+  .container ol li p {
+    padding-left: 20px; /* Adjust instruction paragraph padding */
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px 20px; /* Further reduce padding */
+  }
+
+  .title-text {
+    font-size: 36px; /* Further adjust title font size */
+  }
+
+  .sub-title-text,
+  h2 {
+    font-size: 22px; /* Further adjust subtitle and h2 font size */
+  }
+
+  h3 {
+    font-size: 20px; /* Further adjust h3 font size */
+  }
+
+  p,
+  li {
+    font-size: 16px; /* Further adjust paragraph and list item font size */
+  }
+
+  .top-image-recipe {
+    height: 200px; /* Further adjust hero image height */
+    /* The line below was making the background scroll on small screens.
+       Removing/commenting it out makes the background fixed on all screen sizes. */
+    /* background-attachment: scroll; */
+  }
+
+  .container ol li p {
+    padding-left: 15px; /* Further adjust instruction paragraph padding */
+  }
+
+  .small-text {
+    font-size: 12px; /* Adjust footer small text */
+  }
 }
