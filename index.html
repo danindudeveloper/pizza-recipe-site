@@ -2,8 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Make the title more descriptive and keyword-rich -->
+    <title>Easy Homemade Pizza Recipe - Perfect Crispy Crust</title>
+    <!-- Add a meta description for search engine results -->
+    <meta
+      name="description"
+      content="Learn how to make the perfect homemade pizza from scratch! This easy recipe guides you through creating a delicious pizza with a crispy crust, melty cheese, and your favorite toppings."
+    />
+    <meta name="keywords" content="pizza recipe, homemade pizza, easy pizza, pizza dough, pizza sauce, cooking, recipe" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizza Recipe</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="recipe" />
+    <meta property="og:url" content="https://danindudeveloper.github.io/pizza-recipe-site/home.html" />
+    <meta property="og:title" content="Easy Homemade Pizza Recipe - Perfect Crispy Crust" />
+    <meta
+      property="og:description"
+      content="Learn how to make the perfect homemade pizza from scratch! This easy recipe guides you through creating a delicious pizza with a crispy crust, melty cheese, and your favorite toppings."
+    />
+    <meta property="og:image" content="https://danindudeveloper.github.io/pizza-recipe-site/images/top_image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://danindudeveloper.github.io/pizza-recipe-site/home.html" />
+    <meta property="twitter:title" content="Easy Homemade Pizza Recipe - Perfect Crispy Crust" />
+    <meta property="twitter:description" content="Learn how to make the perfect homemade pizza from scratch! This easy recipe guides you through creating a delicious pizza with a crispy crust, melty cheese, and your favorite toppings." />
+    <meta property="twitter:image" content="https://danindudeveloper.github.io/pizza-recipe-site/images/top_image.jpg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -151,7 +174,8 @@
             <p class=""><small>NOTE: Nutrition values are approximate and can vary based on specific ingredients and portion sizes.</small></p>
         </section>
         <section class="final-image-gallery container">
-            <img src="./images/bottom_image.jpg" alt="pizza image">
+            <!-- Improve image alt text for SEO and accessibility -->
+            <img src="./images/bottom_image.jpg" alt="A freshly baked homemade pizza with basil, sliced and ready to serve.">
         </section>
     </main>
     <footer class="container">
@@ -163,5 +187,33 @@
         >
       </p>
     </footer>
+
+    <!-- 
+      Consider adding JSON-LD Structured Data for Recipes.
+      This helps search engines understand your content better and can lead to rich snippets in search results.
+      Example (place before closing </head> or </body> tag):
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Recipe",
+        "name": "The Perfect Homemade Pizza",
+        "image": ["./images/top_image.jpg", "./images/bottom_image.jpg"],
+        "description": "This classic Margherita-style pizza is simple, flavorful, and made entirely from scratch using fresh ingredients.",
+        "keywords": "pizza, homemade pizza, margherita pizza, easy recipe",
+        "prepTime": "PT20M",
+        "cookTime": "PT15M",
+        "totalTime": "PT1H15M", // Includes rising time
+        "recipeYield": "1 large pizza",
+        "recipeIngredient": [
+          "2 cups (250g) all-purpose flour",
+          // ... list all ingredients
+        ],
+        "recipeInstructions": [
+          // ... list all instruction steps as objects or text
+        ]
+        // Add more properties like author, nutrition, aggregateRating etc.
+      }
+      </script>
+    -->
   </body>
 </html>
