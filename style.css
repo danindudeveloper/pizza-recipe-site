@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  padding: 30px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+p,
+li {
+  font-size: 24px;
+}
+
+small {
+  font-family: "JetBrains Mono", monospace;
+}
+.top-image-recipe {
+  background-image: url("./images/top_image.jpg"); /* Replace with your image link */
+  background-size: cover; /* This makes the image cover the whole background */
+  background-repeat: no-repeat; /* This stops the image from repeating */
+  background-attachment: fixed; /* This makes the image stay in place when you scroll */
+  background-color: #fce7e7;
+  height: 325px;
+  border-radius: 0 0 30px 30px;
+}
+
+/*title editing*/
+
+.title-text {
+  font-size: 64px;
+}
+
+.sub-title-text {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*introduction*/
+
+.container ul,
+ol {
+  list-style-position: inside; /* Aligns bullets with the text content */
+  padding-left: 0; /* Removes default browser indentation for the list */
+}
+
+.container ol li p {
+  padding-left: 30px;
+}
+
+/* Time labels in introduction */
+.time-label {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.final-image-gallery img{
+  background-size: cover; /* This makes the image cover the whole background */
+  background-repeat: no-repeat; /* This stops the image from repeating */
+  background-attachment: fixed;
+  border-radius: 30px;
+}
